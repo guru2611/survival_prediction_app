@@ -58,4 +58,4 @@ iface = gradio.Interface(fn = predict_death_event,
                          description = description,
                          allow_flagging='never')
 
-iface.launch(share = True) 
+iface.launch(server_name='0.0.0.0', server_port=8001) 
