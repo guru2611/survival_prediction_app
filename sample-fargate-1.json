@@ -1,9 +1,9 @@
 {
-    "family": "sample-fargate-1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:058264536492:task-definition/sample-fargate:1",
     "containerDefinitions": [
         {
-            "name": "surv-prediction-app01",
-            "image": "992382787249.dkr.ecr.ap-south-1.amazonaws.com/surv-prediction-1b",
+            "name": "survival-prediction-app",
+            "image": "058264536492.dkr.ecr.ap-south-1.amazonaws.com/g6_ecr",
             "cpu": 0,
             "portMappings": [
                 {
@@ -19,11 +19,37 @@
             "systemControls": []
         }
     ],
-    "executionRoleArn": "arn:aws:iam::992382787249:role/ecsTaskExecutionRole",
+    "family": "sample-fargate",
+    "executionRoleArn": "arn:aws:iam::058264536492:role/EcsTaskExecutionRole",
     "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
     "cpu": "1024",
-    "memory": "4096"
+    "memory": "4096",
+    "registeredAt": "2024-05-18T04:03:06.549Z",
+    "registeredBy": "arn:aws:sts::058264536492:assumed-role/AWSReservedSSO_AdministratorAccess_448512bfb16b2c76/2301726",
+    "tags": []
 }
